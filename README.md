@@ -1,32 +1,14 @@
-# Personal Portfolio Website
+# Ryan Tobin – Personal Portfolio Website
 
-A modern, responsive personal portfolio website built with HTML5, CSS3, and vanilla JavaScript. Features a clean design, dark/light theme toggle, and smooth animations.
+Welcome to my personal portfolio! This website showcases my work as a software engineer and data analyst. Here you'll find my featured projects, experience, skills, and ways to get in touch.
+
+## About
+This is a modern, responsive portfolio built with HTML, CSS, and JavaScript. It features a clean design, smooth animations, and a dark/light theme toggle. The site is fully responsive and works on all devices.
 
 ## Features
+- Project highlights and experience timeline
+- Contact form for easy communication
+- Animated, modern UI with theme switching
+- GitHub activity and tech stack showcase
 
-- Dark/Light theme toggle with local storage persistence
-- Fully responsive design for all devices
-- Modern and clean UI with smooth animations
-- Contact form integration (Formspree)
-- Smooth scrolling navigation
-- Intersection Observer for scroll animations
-- Semantic HTML for better accessibility 
-- CSS custom properties for easy theming
-
-## Project Structure
-
-portfolio/
-├── index.html # Main HTML file
-├── styles/
-│ ├── main.css # Main stylesheet
-│ └── themes.css # Theme-specific styles
-├── js/
-│ ├── main.js # Main JavaScript file
-│ └── theme.js # Theme toggle functionality
-└── README.md # Project documentation
-
-## Browser Support
-- Chrome
-- Firefox
-- Safari
-- Edge
+Feel free to explore my work and reach out if you'd like to connect!
