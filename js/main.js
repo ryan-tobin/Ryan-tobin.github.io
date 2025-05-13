@@ -80,7 +80,6 @@ style.textContent = `
 
 document.head.appendChild(style);
 
-// Initialize particles.js for hero background
 if (document.getElementById('particles-js')) {
   particlesJS('particles-js', {
     particles: {
