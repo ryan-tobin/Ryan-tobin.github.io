@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ryan Tobin - Portfolio</title>
+        <meta name="description" content="Personal portfolio website showcasing projects and skills">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/themes.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <meta property="og:title" content="Ryan Tobin - Portfolio" />
+        <meta property="og:description" content="Software Engineer & Data Analyst Portfolio" />
+        <meta property="og:image" content="images/og-image.png" />
+        <meta property="og:url" content="https://yourdomain.com" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ryan Tobin - Portfolio" />
+        <meta name="twitter:description" content="Software Engineer & Data Analyst Portfolio" />
+        <meta name="twitter:image" content="images/og-image.png" />
+        <script src="js/particles.min.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <nav class="nav">
+                <div class="logo">
+                    <img src="images/signature.png" alt="Ryan Tobin signature" style="height: 48px;" />
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact Me!</a></li>
+                    <li>
+                        <a href="resume.pdf" class="btn small" download>
+                            <i class="fas fa-download"></i> Resume
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/ryan-tobin" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://linkedin.com/in/ryanntobinn" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <button id="theme-toggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="hero clear-header">
+            <div id="particles-js"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="greeting">Hi, I'm</span>
+                    <h1 class="name">Ryan Tobin</h1>
+                    <p class="subtitle">Software Engineer & Data Analyst</p>
+                    <p class="hero-description">
+                        Welcome to my portfolio! I'm a software engineer and data analyst with 3+ years practical experience with a passion for coding and analyzing data.
+                         Explore my projects and get in touch!
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn primary">View My Work</a>
+                        <a href="#contact" class="btn secondary">Contact Me</a>
+                    </div>
+                    <div class="tech-stack-hero animated-stack">
+                        <i class="fab fa-python stack-icon"></i>
+                        <i class="fab fa-r-project stack-icon"></i>
+                        <i class="fab fa-react stack-icon"></i>
+                        <i class="fab fa-js stack-icon"></i>
+                        <i class="fab fa-docker stack-icon"></i>
+                    </div>
+                </div>
+                <div class="hero-group-card">
+                    <div class="currently-building-banner">
+                        <span>🚧 Currently Building: <strong>Auto Prices Dashboard</strong> (Python, Streamlit, Docker)</span>
+                    </div>
+                    <div class="hero-terminal">
+                        <div class="terminal-bar">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <pre class="typed-code"><span id="typed"></span></pre>
+                    </div>
+                    <div class="now-playing">
+                        <span class="now-playing-label">Now Playing:</span>
+                        <span class="now-playing-track">"lofi hip hop radio – beats to code/relax to"</span>
+                        <a href="https://www.youtube.com/watch?v=jfKfPfyJRdk" target="_blank" rel="noopener" class="now-playing-link">Listen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>&#8595;</span>
+            </div>
+        </section>
+
+        <svg class="section-divider" viewBox="0 0 1440 100" width="100%" height="100" preserveAspectRatio="none"><path d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z" fill="#f3f4f6"></path></svg>
+
+        <section id="about" class="section clear-header about-section">
+            <div class="about-container">
+              <div class="about-headshot">
+                <img src="images/headshot.jpg" alt="Ryan Tobin headshot" />
+              </div>
+              <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                  I am a software engineer and data analyst with a passion for coding, analyzing data, and developing innovative solutions in genomics and bioinformatics. My work bridges technology and science, and I enjoy collaborating with interdisciplinary teams to solve complex problems.
+                  My main coding langauge focus is Python and R, but I am versed in various frontend and backend languages such as Java, JavaScript, Node.js, and others! Always open to learning more about software engineering, and excited for this journey into being apart of a software engineering team!
+                </p>
+              </div>
+            </div>
+          </section>
+
+        <svg class="section-divider" viewBox="0 0 1440 100" width="100%" height="100" preserveAspectRatio="none"><path d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z" fill="#f3f4f6"></path></svg>
+
+        <section id="experience" class="section clear-header">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Research Intern</h3>
+                            <span class="company">Institute for Genomics and Evolutionary Medicine (IGEM)</span>
+                            <span class="date">2022 - May 2025</span>
+                        </div>
+                        <p class="description">
+                            - Designed and implemented a bioinformatic pipeline for tumor progression and evolutionary history using Python and R (Tobin et al., 2025 - In Review) <br>
+                            - Analyzed large-scale sequence data sets to identify evolutionary patterns. <br>
+                            - Utilized SQL to manage and query biological databases.<br>
+                            - Created visualization and statistical models and summaries to present findings in meetings.<br>
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">R</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Git/GitHub</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Fullstack Developer</h3>
+                            <span class="company">Independent Project/IGEM</span>
+                            <span class="date">2022 - May 2025</span>
+                        </div>
+                        <p class="description">
+                            - Helped develop a responsive web application using React and Node.js to manage dynamic user data <br>
+                            - Created a PostgreSQL database schema with relational models, indexes, and joins to efficiently store and query data <br>
+                            - Integrated Material UI and Tailwind CSS for a modern and responsive UI. <br>
+                            - Wrote unit and integration tests using Supertest to ensure reliability and catch edge cases in both frontend and backend logic. <br>
+                            - Used Docker for containerization. <br>
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Supertest</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3>Researcher</h3>
+                            <span class="company">Miura Lab - Mississippi State University</span>
+                            <span class="date">2025 - Present</span>
+                        </div>
+                        <p class="description">
+                            - Designing and implementing pipeline for single cell RNA sequencing data. <br>
+                            - Analyzing large scale single cell RNA sequencing data using Python and R.<br>
+                            - Creating single cell RNA phylogenetic trees using R.<br>
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">R</span>
+                            <span class="tech-tag">SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <svg class="section-divider" viewBox="0 0 1440 100" width="100%" height="100" preserveAspectRatio="none"><path d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z" fill="#f3f4f6"></path></svg>
+
+        <section id="projects" class="section clear-header">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>GenoPath</h3>
+                        <p class="project-description">
+                            GenoPath, a streamlined pipeline that integrates existing computational methods for tumor evolution analysis, along with novel visualization tools to support biological interpretation. GenoPath is designed to reduce computational barriers and enable broader access to complex analyses in cancer genomics. The pipeline is openly available via GitHub, and the manuscript includes a real-world case study, code description, and discussion of the tool's utility and limitations.
+                        </p>
+                        <p class="project-citation">
+                            <strong>Publication:</strong> GenoPath: A pipeline to infer tumor clone composition, mutational history, and metastatic cell migration events from tumor DNA sequencing data. <br>
+                            <strong>Journal:</strong> Frontiers in Bioinformatics, 2025 <br>
+                            <strong>Authors:</strong> Ryan Tobin, Shikha Singh, Sudhir Kumar, Sayaka Miura
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">R</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ryan-tobin/GenoPath" class="btn small" target="_blank" rel="noopener">Find GitHub Project Here!</a>
+                        </div>
+                    </div>
+                </article>
+                <!---->
+                <article class="project-card">
+                    <div class="project-content">
+                        <h3>Case Study: Auto Prices Trend (2019-2023)</h3>
+                        <p class="project-description">
+                            An end-to-end data science project analyzing auto price trends and economic factors from 2019 to 2023. Features data ingestion, cleaning, SQL analytics, time-series modeling, and an interactive Streamlit dashboard. Fully containerized with Docker for easy deployment.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Streamlit</span>
+                            <span class="tech-tag">SQLite</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ryan-tobin/auto-prices-trend" class="btn small" target="_blank" rel="noopener">Find GitHub Project Here!</a>
+                        </div>
+                    </div>
+                </article>
+                <!---->
+            </div>
+        </section>
+
+        <svg class="section-divider" viewBox="0 0 1440 100" width="100%" height="100" preserveAspectRatio="none"><path d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z" fill="#f3f4f6"></path></svg>
+
+        <section id="github-activity" class="section clear-header">
+            <h2>GitHub Activity</h2>
+            <img src="https://ghchart.rshah.org/ryan-tobin" alt="Ryan Tobin's GitHub chart" style="width:100%;max-width:700px;" />
+        </section>
+
+        <section id="skills" class="section clear-header">
+            <h2>Skills & Tech</h2>
+            <div class="skills-container">
+                <div class="skills-category">
+                    <h3>Frontend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <div class="skills-category">
+                    <h3>Backend</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="fab fa-python"></i>
+                            <spanz>Python</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fa-solid fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <div class="skills-category">
+                    <h3>Bioinformatics / Data Analytics</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="fab fa-python"></i>
+                            <spanz>Python</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fa-solid fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-r-project"></i>
+                            <span>R</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fa-solid fa-table"></i>
+                            <span>Excel</span>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fa-solid fa-terminal"></i>
+                            <span>Bash</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section clear-header">
+            <h2>Get In Touch!</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="you@email.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required placeholder="Type your message..."></textarea>
+                </div>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2025 Ryan Tobin. All Rights Reserved</p>
+        </footer>
+
+        <script src="js/particles.min.js"></script>
+        <script src="js/main.js"></script>
+        <script type="module" src="js/theme.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.Typed) {
+                new Typed('#typed', {
+                    strings: [
+                        'echo "Hello, world!"',
+                        'print("Welcome to my portfolio!")',
+                        'const dev = { name: "Ryan Tobin", stack: ["Python", "React", "R"] };',
+                        'SELECT * FROM projects WHERE owner = "Ryan Tobin";',
+                        '# Building cool things...'
+                    ],
+                    typeSpeed: 45,
+                    backSpeed: 25,
+                    backDelay: 1200,
+                    loop: true,
+                    showCursor: true,
+                    cursorChar: '_'
+                });
+            }
+        });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+        <script>
+        // Konami code: up up down down left right left right b a
+        const konami = [38,38,40,40,37,39,37,39,66,65];
+        let konamiIndex = 0;
+        document.addEventListener('keydown', function(e) {
+            if (e.keyCode === konami[konamiIndex]) {
+                konamiIndex++;
+                if (konamiIndex === konami.length) {
+                    confetti();
+                    alert('Easter Egg! 🎉');
+                    konamiIndex = 0;
+                }
+            } else {
+                konamiIndex = 0;
+            }
+        });
+        </script>
+    </body>
+</html>

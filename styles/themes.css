@@ -1,0 +1,61 @@
+:root {
+    --primary-color: #552843;
+    --secondary-color: #7A3a4a;
+    --text-color: #2c2c2c;
+    --background-color: #f7f4f4;
+    --surface-color: #ffffff;
+    --accent-color: #e8d8d8;
+    --border-color: #e0d0d0
+}
+
+[data-theme="dark"] {
+    --primary-color: #7a3a4a;
+    --secondary-color: #552834;
+    --text-color: #f7f4f4;
+    --background-color: #1a1a1a;
+    --surface-color: #2c2c2c;
+    --accent-color: #3a3a3a;
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    font-size: 1.25rem;
+    transition: var(--transition-base);
+}
+
+#theme-toggle:hover {
+    color: var(--primary-color);
+    transform: rotate(15deg);
+}
+
+[data-theme="dark"] .project-card {
+    border: 1px solid var(--surface-color);
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group textarea {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-color: var(--surface-color)
+}
+
+[data-theme="dark"] .form-group input:focus,
+[data-theme="dark"] .form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+[data-theme="dark"] .tech-tag,
+[data-theme="dark"] .tech-badge,
+[data-theme="dark"] .project-links .btn{
+    color: #f7f4f4;
+    background-color: #333; 
+}
