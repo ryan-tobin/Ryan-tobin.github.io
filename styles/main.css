@@ -194,7 +194,6 @@ p {
     color: var(--primary-color);
 }
 
-/* Responsive Header */
 @media (max-width: 900px) {
     .nav {
         flex-direction: column;
@@ -212,7 +211,6 @@ p {
     }
 }
 
-/* Remove all prominent hero headshot and hero-content-with-headshot styles */
 .hero-content-with-headshot, .hero-headshot-hero, .hero-headshot-large, .hero-headshot-floating, .prominent-hero, .hero-headshot-wrapper {
   display: none !important;
   position: static !important;
@@ -231,7 +229,6 @@ p {
     margin: 0.5em 0 1em 0;
 }
 
-/* Restore hero section to simple layout */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -279,7 +276,6 @@ p {
     }
 }
 
-/* Grouped hero card for top widgets */
 .hero-group-card {
     background: rgba(255,255,255,0.85);
     border-radius: 1.5rem;
@@ -347,7 +343,6 @@ p {
 }
 
 .name {
-    /* background: linear-gradient(120deg, #dbeafe 60%, #fff 100%); */
     background: none;
     display: inline-block;
     padding: 0 0.5em;
@@ -762,13 +757,11 @@ p {
     letter-spacing: 0.02em;
 }
 
-/* Utility class to clear fixed header */
 .clear-header {
     padding-top: calc(var(--header-height) + var(--spacing-lg));
     margin-top: calc(-1 * var(--spacing-lg));
 }
 
-/* Ensure proper spacing between sections */
 .section + .section {
     margin-top: var(--spacing-xl);
 }
@@ -842,7 +835,6 @@ p {
     }
 }
 
-/* --- Neon/Glitch Effect for Name --- */
 .neon-glitch {
     position: relative;
     color: var(--primary-color);
