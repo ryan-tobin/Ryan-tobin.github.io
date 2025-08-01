@@ -1,416 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Ryan Tobin - Portfolio</title>
-        <meta name="description" content="Personal portfolio website showcasing projects and skills">
-        <link rel="stylesheet" href="styles/main.css">
-        <link rel="stylesheet" href="styles/themes.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <meta property="og:title" content="Ryan Tobin - Portfolio" />
-        <meta property="og:description" content="Software Engineer & Data Analyst Portfolio" />
-        <meta property="og:image" content="images/og-image.png" />
-        <meta property="og:url" content="https://yourdomain.com" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ryan Tobin - Portfolio" />
-        <meta name="twitter:description" content="Software Engineer & Data Analyst Portfolio" />
-        <meta name="twitter:image" content="images/og-image.png" />
-        <script src="js/particles.min.js"></script>
-    </head>
-    <body>
-        <header class="header">
-            <nav class="nav">
-                <div class="logo">
-                    <img src="images/signature.png" alt="Ryan Tobin signature" style="height: 48px;" />
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact Me!</a></li>
-                    <li>
-                        <a href="resume.pdf" class="btn small" download>
-                            <i class="fas fa-download"></i> Resume
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/ryan-tobin" target="_blank" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://linkedin.com/in/ryanntobinn" target="_blank" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <button id="theme-toggle" aria-label="Toggle dark mode">
-                            <i class="fas fa-moon"></i>
-                        </button>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <section class="hero clear-header">
-            <div id="particles-js"></div>
-            <div class="hero-content">
-                <div class="hero-text">
-                    <span class="greeting">Hi, I'm</span>
-                    <h1 class="name">Ryan Tobin</h1>
-                    <p class="subtitle">Software Engineer & Data Analyst</p>
-                    <p class="hero-description">
-                        Welcome to my portfolio! I'm a software engineer and data analyst with 3+ years practical experience with a passion for coding and analyzing data.
-                         Explore my projects and get in touch!
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="#projects" class="btn primary">View My Work</a>
-                        <a href="#contact" class="btn secondary">Contact Me</a>
-                    </div>
-                    <div class="tech-stack-hero animated-stack">
-                        <i class="fab fa-python stack-icon"></i>
-                        <i class="fab fa-r-project stack-icon"></i>
-                        <i class="fab fa-react stack-icon"></i>
-                        <i class="fab fa-js stack-icon"></i>
-                        <i class="fab fa-docker stack-icon"></i>
-                    </div>
-                </div>
-                <div class="hero-group-card">
-                    <div class="currently-building-banner">
-                        <span>🚧 Currently Building: <strong>To-do List App</strong> (JavaScript, React, TailwindCSS)</span>
-                    </div>
-                    <div class="hero-terminal">
-                        <div class="terminal-bar">
-                            <span class="dot red"></span>
-                            <span class="dot yellow"></span>
-                            <span class="dot green"></span>
-                        </div>
-                        <pre class="typed-code"><span id="typed"></span></pre>
-                    </div>
-                    <div class="now-playing">
-                        <span class="now-playing-label">Now Playing:</span>
-                        <span class="now-playing-track">"lofi hip hop radio – beats to code/relax to"</span>
-                        <a href="https://www.youtube.com/watch?v=jfKfPfyJRdk" target="_blank" rel="noopener" class="now-playing-link">Listen</a>
-                    </div>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryan Tobin - Software Engineer & Data Analyst</title>
+    <meta name="description" content="Software Engineer & Data Analyst crafting innovative solutions at the intersection of code and creativity">
+    
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Modern Font Stack -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/modern.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ryan Tobin - Software Engineer & Data Analyst" />
+    <meta property="og:description" content="Innovative solutions at the intersection of code and creativity" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ryan-tobin.github.io" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="code-loader">
+                <span class="bracket">{</span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="bracket">}</span>
             </div>
-            <div class="scroll-indicator">
-                <span>&#8595;</span>
+            <p class="loading-text">Initializing...</p>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="custom-cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">RT</span>
+                <span class="logo-accent">.</span>
             </div>
-        </section>
+            
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" data-section="home">
+                    <span class="nav-number">01.</span>
+                    <span class="nav-text">Home</span>
+                </a>
+                <a href="#about" class="nav-link" data-section="about">
+                    <span class="nav-number">02.</span>
+                    <span class="nav-text">About</span>
+                </a>
+                <a href="#work" class="nav-link" data-section="work">
+                    <span class="nav-number">03.</span>
+                    <span class="nav-text">Work</span>
+                </a>
+                <a href="#projects" class="nav-link" data-section="projects">
+                    <span class="nav-number">04.</span>
+                    <span class="nav-text">Projects</span>
+                </a>
+                <a href="#contact" class="nav-link" data-section="contact">
+                    <span class="nav-number">05.</span>
+                    <span class="nav-text">Contact</span>
+                </a>
+            </div>
 
-        <svg class="section-divider" viewBox="0 0 1440 100" width="100%" height="100" preserveAspectRatio="none"><path d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z" fill="#f3f4f6"></path></svg>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-        <section id="about" class="section clear-header about-section">
-            <div class="about-container">
-              <div class="about-headshot">
-                <img src="IMG_0279.JPG" alt="Ryan Tobin headshot" />
-              </div>
-              <div class="about-text">
-                <h2>About Me</h2>
-                <p>
-                  I am a software engineer and data analyst with a passion for coding, analyzing data, and developing innovative solutions in genomics and bioinformatics. My work bridges technology and science, and I enjoy collaborating with interdisciplinary teams to solve complex problems.
-                  My main coding langauge focus is Python and R, but I am versed in various frontend and backend languages such as Java, JavaScript, Node.js, and others! Always open to learning more about software engineering, and excited for this journey into being apart of a software engineering team!
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-intro">
+                    <span class="wave">👋</span> Hi, my name is
                 </p>
-              </div>
+                <h1 class="hero-name glitch" data-text="Ryan Tobin">
+                    Ryan Tobin
+                </h1>
+                <h2 class="hero-tagline">
+                    I build things for the 
+                    <span class="text-gradient" id="rotating-text">web</span>
+                </h2>
+                <p class="hero-description">
+                    I'm a software engineer specializing in building exceptional digital experiences. 
+                    Currently focused on creating innovative solutions in bioinformatics and data science.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>See My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="resume.pdf" class="btn btn-outline" download>
+                        <i class="fas fa-download"></i>
+                        <span>Resume</span>
+                    </a>
+                </div>
             </div>
-          </section>
-
-        <svg class="section-divider" viewBox="0 0 1440 100" width="100%" height="100" preserveAspectRatio="none"><path d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z" fill="#f3f4f6"></path></svg>
-
-        <section id="experience" class="section clear-header">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Research Intern</h3>
-                            <span class="company">Institute for Genomics and Evolutionary Medicine (IGEM)</span>
-                            <span class="date">2022 - May 2025</span>
-                        </div>
-                        <p class="description">
-                            - Designed and implemented a bioinformatic pipeline for tumor progression and evolutionary history using Python and R (Tobin et al., 2025 - In Review) <br>
-                            - Analyzed large-scale sequence data sets to identify evolutionary patterns. <br>
-                            - Utilized SQL to manage and query biological databases.<br>
-                            - Created visualization and statistical models and summaries to present findings in meetings.<br>
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">R</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">Git/GitHub</span>
-                        </div>
+            <div class="hero-visual">
+                <div class="floating-card">
+                    <div class="card-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Fullstack Developer</h3>
-                            <span class="company">Independent Project/IGEM</span>
-                            <span class="date">2022 - May 2025</span>
-                        </div>
-                        <p class="description">
-                            - Helped develop a responsive web application using React and Node.js to manage dynamic user data <br>
-                            - Created a PostgreSQL database schema with relational models, indexes, and joins to efficiently store and query data <br>
-                            - Integrated Material UI and Tailwind CSS for a modern and responsive UI. <br>
-                            - Wrote unit and integration tests using Supertest to ensure reliability and catch edge cases in both frontend and backend logic. <br>
-                            - Used Docker for containerization. <br>
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">SQL</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Supertest</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Researcher</h3>
-                            <span class="company">Miura Lab - Mississippi State University</span>
-                            <span class="date">2025 - Present</span>
-                        </div>
-                        <p class="description">
-                            - Designing and implementing pipeline for single cell RNA sequencing data. <br>
-                            - Analyzing large scale single cell RNA sequencing data using Python and R.<br>
-                            - Creating single cell RNA phylogenetic trees using R.<br>
-                        </p>
-                        <div class="tech-stack">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">R</span>
-                            <span class="tech-tag">SQL</span>
-                        </div>
+                    <div class="code-snippet">
+                        <pre><code><span class="keyword">const</span> <span class="variable">developer</span> = {
+    <span class="property">name</span>: <span class="string">"Ryan Tobin"</span>,
+    <span class="property">skills</span>: [<span class="string">"Python"</span>, <span class="string">"React"</span>, <span class="string">"R"</span>],
+    <span class="property">passion</span>: <span class="string">"Building cool stuff"</span>,
+    <span class="property">current</span>: <span class="string">"IGEM"</span>
+};</code></pre>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        <div class="scroll-indicator">
+            <span>scroll</span>
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
 
-        <svg class="section-divider" viewBox="0 0 1440 100" width="100%" height="100" preserveAspectRatio="none"><path d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z" fill="#f3f4f6"></path></svg>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">02.</span>
+                    About Me
+                </h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Hello! I'm Ryan, a software engineer and data scientist who loves building things that live on the internet. 
+                        My journey in tech started with a curiosity about how biological data could be analyzed computationally, 
+                        which led me to discover my passion for programming.
+                    </p>
+                    <p>
+                        Fast-forward to today, and I've had the privilege of working on cutting-edge research at 
+                        <a href="#" class="link-accent">IGEM</a> and <a href="#" class="link-accent">Mississippi State University</a>. 
+                        My main focus these days is building accessible, data-driven solutions for complex biological problems.
+                    </p>
+                    <p>Here are a few technologies I've been working with recently:</p>
+                    <ul class="skills-list">
+                        <li>Python</li>
+                        <li>React</li>
+                        <li>TypeScript</li>
+                        <li>Java</li>
+                        <li>PostgreSQL</li>
+                        <li>Docker</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="IMG_0279.JPG" alt="Ryan Tobin" />
+                        <div class="image-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="projects" class="section clear-header">
-            <h2>Featured Projects</h2>
+    <!-- Work Experience -->
+    <section id="work" class="work">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">03.</span>
+                    Where I've Worked
+                </h2>
+            </div>
+            <div class="work-content">
+                <div class="work-tabs">
+                    <button class="tab-button active" data-tab="igem">IGEM</button>
+                    <button class="tab-button" data-tab="msu">MSU</button>
+                    <button class="tab-button" data-tab="freelance">Freelance</button>
+                </div>
+                <div class="work-panels">
+                    <div class="work-panel active" id="igem">
+                        <h3>Research Intern <span class="company">@ IGEM</span></h3>
+                        <p class="date">2022 - May 2025</p>
+                        <ul>
+                            <li>Designed and implemented a bioinformatic pipeline for tumor progression analysis using Python and R</li>
+                            <li>Analyzed large-scale sequence data sets to identify evolutionary patterns</li>
+                            <li>Created visualization tools and statistical models to present findings</li>
+                            <li>Utilized SQL to manage and query biological databases</li>
+                        </ul>
+                    </div>
+                    <div class="work-panel" id="msu">
+                        <h3>Researcher <span class="company">@ Miura Lab - MSU</span></h3>
+                        <p class="date">2025 - Present</p>
+                        <ul>
+                            <li>Designing pipeline for single cell RNA sequencing data analysis</li>
+                            <li>Analyzing large scale single cell RNA sequencing data using Python and R</li>
+                            <li>Creating single cell RNA phylogenetic trees using advanced R packages</li>
+                            <li>Collaborating with interdisciplinary team on genomics research</li>
+                        </ul>
+                    </div>
+                    <div class="work-panel" id="freelance">
+                        <h3>Fullstack Developer <span class="company">@ Independent</span></h3>
+                        <p class="date">2022 - 2025</p>
+                        <ul>
+                            <li>Developed responsive web applications using React and Node.js</li>
+                            <li>Created PostgreSQL database schemas with optimized queries</li>
+                            <li>Integrated Material UI and Tailwind CSS for modern UI/UX</li>
+                            <li>Wrote comprehensive tests using Supertest and Jest</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span class="title-number">04.</span>
+                    Some Things I've Built
+                </h2>
+            </div>
             <div class="projects-grid">
-                <article class="project-card">
+                <!-- Featured Project 1 -->
+                <article class="project-card featured">
                     <div class="project-content">
-                        <h3>GenoPath</h3>
-                        <p class="project-description">
-                            GenoPath, a streamlined pipeline that integrates existing computational methods for tumor evolution analysis, along with novel visualization tools to support biological interpretation. GenoPath is designed to reduce computational barriers and enable broader access to complex analyses in cancer genomics. The pipeline is openly available via GitHub, and the manuscript includes a real-world case study, code description, and discussion of the tool's utility and limitations.
-                        </p>
-                        <p class="project-citation">
-                            <strong>Publication:</strong> GenoPath: A pipeline to infer tumor clone composition, mutational history, and metastatic cell migration events from tumor DNA sequencing data. <br>
-                            <strong>Journal:</strong> Frontiers in Bioinformatics, 2025 <br>
-                            <strong>Authors:</strong> Ryan Tobin, Shikha Singh, Sudhir Kumar, Sayaka Miura
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">R</span>
+                        <p class="project-overline">Featured Project</p>
+                        <h3 class="project-title">GenoPath</h3>
+                        <div class="project-description">
+                            <p>
+                                A streamlined pipeline that integrates computational methods for tumor evolution analysis, 
+                                with novel visualization tools to support biological interpretation. Published in Frontiers in Bioinformatics.
+                            </p>
                         </div>
+                        <ul class="project-tech-list">
+                            <li>Python</li>
+                            <li>R</li>
+                            <li>Bioinformatics</li>
+                            <li>Data Visualization</li>
+                        </ul>
                         <div class="project-links">
-                            <a href="https://github.com/ryan-tobin/GenoPath" class="btn small" target="_blank" rel="noopener">Find GitHub Project Here!</a>
+                            <a href="https://github.com/ryan-tobin/GenoPath" aria-label="GitHub Link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.frontiersin.org/journals/bioinformatics/articles/10.3389/fbinf.2025.1615834/full" aria-label="External Link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
                     </div>
                 </article>
-                <!---->
-                <article class="project-card">
+
+                <!-- Featured Project 2 -->
+                <article class="project-card featured">
                     <div class="project-content">
-                        <h3>Case Study: Auto Prices Trend (2019-2023)</h3>
-                        <p class="project-description">
-                            An end-to-end data science project analyzing auto price trends and economic factors from 2019 to 2023. Features data ingestion, cleaning, SQL analytics, time-series modeling, and an interactive Streamlit dashboard. Fully containerized with Docker for easy deployment.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Streamlit</span>
-                            <span class="tech-tag">SQLite</span>
-                            <span class="tech-tag">Docker</span>
+                        <p class="project-overline">Featured Project</p>
+                        <h3 class="project-title">Nexus Weaver</h3>
+                        <div class="project-description">
+                            <p>
+                                Nexus Weaver is an open-source platform that eliminates the complexity of modern infrastructure. 
+                                Write your code, define your app in a simple manifest, and let Weaver handle everything else - 
+                                building, deploying, networking, and monitoring.
+                            </p>
                         </div>
+                        <ul class="project-tech-list">
+                            <li>Python</li>
+                            <li>Go</li>
+                            <li>Java</li>
+                            <li>TypeScript</li>
+                            <li>Supabase</li>
+                            <li>Google Cloud</li>
+                        </ul>
                         <div class="project-links">
-                            <a href="https://github.com/ryan-tobin/auto-prices-trend" class="btn small" target="_blank" rel="noopener">Find GitHub Project Here!</a>
+                            <a href="https://github.com/ryan-tobin/nexus-weaver" aria-label="GitHub Link" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.nexusweaver.tech/" aria-label="External Link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
                         </div>
+                    </div>
+                    <div class="project-image">
+                        <a href="#" target="_blank">
+                            <div class="placeholder-image">[Project]</div>
+                        </a>
                     </div>
                 </article>
-                <!---->
-                <article class="project-card">
-                    <div class="project-content">
-                        <h3>Web App: To-do List</h3>
-                        <p class="project-description">
-                            React To-Do List is a modern, feature-rich task management app built with React and Vite. Easily manage tasks, subtasks, priorities, and more—all within a beautiful, responsive UI.
-                        </p>
-                        <div class="project-tech">
-                            <span class="tech-tag">HTML5</span>
-                            <span class="tech-tag">CSS3</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">React</span>
-                        </div>
-                        <div class="project-links style="padding: 0.5rem 0;">
-                            <a href="https://github.com/ryan-tobin/react-to-do-list" class="btn small" target="_blank" rel="noopener">Find GitHub Project Here!</a>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://react-to-do-list-zeta-lovat.vercel.app" class="btn small" target="_blank" rel="noopener">Web App Deployed Here!</a>
-                        </div>
-                    </div>
-                </article>
-                <!---->
-            </div>
-        </section>
 
-        <svg class="section-divider" viewBox="0 0 1440 100" width="100%" height="100" preserveAspectRatio="none"><path d="M0,0 C480,100 960,0 1440,100 L1440,100 L0,100 Z" fill="#f3f4f6"></path></svg>
-
-        <section id="github-activity" class="section clear-header">
-            <h2>GitHub Activity</h2>
-            <img src="https://ghchart.rshah.org/ryan-tobin" alt="Ryan Tobin's GitHub chart" style="width:100%;max-width:700px;" />
-        </section>
-
-        <section id="skills" class="section clear-header">
-            <h2>Skills & Tech</h2>
-            <div class="skills-container">
-                <div class="skills-category">
-                    <h3>Frontend</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <i class="fab fa-react"></i>
-                            <span>React</span>
+                <!-- Other Projects -->
+                <div class="other-projects">
+                    <h3 class="other-projects-title">Other Noteworthy Projects</h3>
+                    <div class="project-cards-grid">
+                        <div class="project-card-small">
+                            <div class="project-top">
+                                <div class="folder">
+                                    <i class="far fa-folder"></i>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/ryan-tobin/auto-prices-trend" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">Auto Prices Trend Analysis</h3>
+                            <p class="project-description">
+                                End-to-end data science project analyzing auto price trends from 2019-2023 with interactive Streamlit dashboard.
+                            </p>
+                            <ul class="project-tech-list">
+                                <li>Python</li>
+                                <li>Streamlit</li>
+                                <li>SQLite</li>
+                                <li>Docker</li>
+                            </ul>
                         </div>
-                        <div class="skill-card">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-card">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML</span>
-                        </div>
-                        <div class="skill-card">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS</span>
-                        </div>
-                        <div class="skill-card">
-                            <i class="fab fa-node-js"></i>
-                            <span>Node.js</span>
-                        </div>
-                    </div>
-                </div>
-                <!---->
-                <div class="skills-category">
-                    <h3>Backend</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <i class="fab fa-python"></i>
-                            <spanz>Python</span>
-                        </div>
-                        <div class="skill-card">
-                            <i class="fa-solid fa-database"></i>
-                            <span>SQL</span>
-                        </div>
-                        <div class="skill-card">
-                            <i class="fab fa-java"></i>
-                            <span>Java</span>
-                        </div>
-                        <div class="skill-card">
-                            <i class="fab fa-node-js"></i>
-                            <span>Node.js</span>
-                        </div>
-                    </div>
-                </div>
-                <!---->
-                <div class="skills-category">
-                    <h3>Bioinformatics / Data Analytics</h3>
-                    <div class="skills-grid">
-                        <div class="skill-card">
-                            <i class="fab fa-python"></i>
-                            <spanz>Python</span>
-                        </div>
-                        <div class="skill-card">
-                            <i class="fa-solid fa-database"></i>
-                            <span>SQL</span>
-                        </div>
-                        <div class="skill-card">
-                            <i class="fab fa-r-project"></i>
-                            <span>R</span>
-                        </div>
-                        <div class="skill-card">
-                            <i class="fa-solid fa-table"></i>
-                            <span>Excel</span>
-                        </div>
-                        <div class="skill-card">
-                            <i class="fa-solid fa-terminal"></i>
-                            <span>Bash</span>
+                        <div class="project-card-small">
+                            <div class="project-top">
+                                <div class="folder">
+                                    <i class="far fa-folder"></i>
+                                </div>
+                                <div class="project-links">
+                                    <a href="https://github.com/ryan-tobin/react-to-do-list" target="_blank">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="https://react-to-do-list-zeta-lovat.vercel.app" target="_blank">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <h3 class="project-title">React To-Do List</h3>
+                            <p class="project-description">
+                                Modern task management app with subtasks, priorities, and beautiful UI built with React and Vite.
+                            </p>
+                            <ul class="project-tech-list">
+                                <li>React</li>
+                                <li>JavaScript</li>
+                                <li>CSS3</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact" class="section clear-header">
-            <h2>Get In Touch!</h2>
-            <form id="contact-form" class="contact-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Your Name">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="you@email.com">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required placeholder="Type your message..."></textarea>
-                </div>
-                <button type="submit" class="btn primary">Send Message</button>
-            </form>
-        </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header centered">
+                <p class="section-overline">05. What's Next?</p>
+                <h2 class="section-title big">Get In Touch</h2>
+                <p class="section-description">
+                    I'm currently looking for new opportunities and my inbox is always open. 
+                    Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                </p>
+                <a href="mailto:ryantobin119@gmail.com" class="btn btn-primary big">
+                    Say Hello
+                </a>
+            </div>
+        </div>
+    </section>
 
-        <footer class="footer">
-            <p>&copy; 2025 Ryan Tobin. All Rights Reserved</p>
-        </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://github.com/ryan-tobin" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/ryanntobinn" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:ryanntobin@gmail.com" aria-label="Email">
+                    <i class="far fa-envelope"></i>
+                </a>
+            </div>
+            <p class="footer-text">
+                Designed & Built by Ryan Tobin
+            </p>
+        </div>
+    </footer>
 
-        <script src="js/particles.min.js"></script>
-        <script src="js/main.js"></script>
-        <script type="module" src="js/theme.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-        <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (window.Typed) {
-                new Typed('#typed', {
-                    strings: [
-                        'echo "Hello, world!"',
-                        'print("Welcome to my portfolio!")',
-                        'const dev = { name: "Ryan Tobin", stack: ["Python", "React", "R"] };',
-                        'SELECT * FROM projects WHERE owner = "Ryan Tobin";',
-                        '# Building cool things...'
-                    ],
-                    typeSpeed: 45,
-                    backSpeed: 25,
-                    backDelay: 1200,
-                    loop: true,
-                    showCursor: true,
-                    cursorChar: '_'
-                });
-            }
-        });
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
-        <script>
-        // Konami code: up up down down left right left right b a
-        const konami = [38,38,40,40,37,39,37,39,66,65];
-        let konamiIndex = 0;
-        document.addEventListener('keydown', function(e) {
-            if (e.keyCode === konami[konamiIndex]) {
-                konamiIndex++;
-                if (konamiIndex === konami.length) {
-                    confetti();
-                    alert('Easter Egg! 🎉');
-                    konamiIndex = 0;
-                }
-            } else {
-                konamiIndex = 0;
-            }
-        });
-        </script>
-    </body>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="js/modern.js"></script>
+</body>
 </html>
